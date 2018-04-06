@@ -1,0 +1,50 @@
+---
+title: "Tesla Delivered Cars"
+author: "Neal"
+date: "April 3, 2018"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(leaflet)
+library(ggplot2)
+library(tidyr)
+library(dplyr)
+library(RCurl)
+library(plotly)
+```
+
+```{r read and process data, include=FALSE}
+df_quarter <- read.csv(file = "https://raw.githubusercontent.com/nealxun/DataProdcutProject/gh-pages/Presentation/tesla_cars_for_project.csv", 
+                   header = TRUE, stringsAsFactors = FALSE)
+# change model to factor
+df_quarter$model <- factor(df_quarter$model, levels = c("Model S", "Model X", "Model 3"))
+
+```
+
+## Tesla Delivered Cars - Noncumulative
+```{r plot1 fig.cap = "Tesla Delivered Cars"}
+# stacked bar chart
+plot_ly(df_quarter, x = ~quarter, y = ~qty, color = ~model, type = "bar") %>%
+        layout(title = "",
+               xaxis = list(title = ""),
+               yaxis = list(title = "Quantity"),
+               margin = list(b = 105), xaxis = list(tickangle = 45))
+
+```
+
+## Tesla Delivered Cars - Cumulative
+```{r plot2, fig.cap = "Tesla Delivered Cars - Cumulative Quantity"}
+# cumulative delivered numbers
+plot_ly(df_quarter, x = ~quarter, y = ~csum, color = ~model, type = "bar", 
+        hoverinfo = "text", text = ~paste0(as.character(quarter), ": ", csum)) %>%
+        layout(title = "", 
+               xaxis = list(title = ""),
+               yaxis = list(title = "Quantity"),
+               barmode = 'stack',
+               margin = list(b = 105), xaxis = list(tickangle = 45))
+
+```
+
+
