@@ -1,0 +1,13 @@
+num,name,state,latitude,longitude,weblink,date,color,note
+1,Greak Smoky National Park,North Carolina/Tennessee,35.6118,-83.4859,https://www.nps.gov/grsm/index.htm,16-Mar,springgreen,Both
+2,Yellow Stone National Park,Wyoming,44.428,-110.5885,https://www.nps.gov/yell/index.htm,TBD,red,Planning
+3,Gates of The Arctic National Park,Arizona,67.9146,-153.4638,https://www.nps.gov/gaar/index.htm,TBD,red,Planning
+4,Crater Lake National Park,Oregon,42.8684,-122.1685,https://www.nps.gov/crla/index.htm,TBD,red,Planning
+5,Death Valley National Park,California,36.5323,-116.9325,https://www.nps.gov/deva/index.htm,TBD,red,Planning
+6,Zion National Park,Utah,37.2928,-113.0263,https://www.nps.gov/zion/index.htm,TBD,red,Planning
+7,Yosemite National Park,California,37.8651,-119.5383,https://www.nps.gov/yose/index.htm,16-Dec,orange,Neal Only
+8,Rocky Mountain National Park,Colorado,40.3428,-105.6836,https://www.nps.gov/romo/index.htm,11-Mar,orange,Neal Only
+9,Olympic National Park,Washington,47.8021,-123.6044,https://www.nps.gov/olym/index.htm,13-May,orange,Neal Only
+10,Hot Spring National Park,Arkansas,34.5037,-93.0552,https://www.nps.gov/hosp/index.htm,15-Jan,orange,Neal Only
+11,Sequoia National Park,California,36.4684,-118.5658,https://www.nps.gov/seki/index.htm,17-Dec,orange,Neal Only
+12,Grand Canyon National Park,California,36.107,-112.113,https://www.nps.gov/grca/index.htm,16-May,yellow,Caisse Only
