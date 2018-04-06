@@ -3,4 +3,4 @@
 
 Link to the html file
 
-Version 1: https://nealxun.github.io/RDataScienceCoursera_Personal/9_DataProduct/Presentation/tesla_cars_v1.html
+https://nealxun.github.io/RDataScienceCoursera_Personal/9_DataProduct/Presentation/tesla_cars_v1.html
