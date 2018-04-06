@@ -1,0 +1,64 @@
+---
+title: "Visited National Parks"
+author: "Neal"
+date: "February 3, 2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(leaflet)
+library(ggplot2)
+library(tidyr)
+library(dplyr)
+```
+
+## National Parks
+
+
+```{r maps, echo = FALSE, warning=FALSE, message=FALSE}
+# parks icon
+parkIcon <- makeIcon(iconUrl ="national-park-map-icons.png",
+                     iconWidth = 31*215/230, iconHeight = 31,
+                     iconAnchorX = 31*215/230/2, iconAnchorY = 16)
+# park website link
+parkSites <- c(
+        "<a href = 'https://www.nps.gov/romo/index.htm'>Rocky Mountain National Park</a>",
+        "<a href = 'https://www.nps.gov/olym/index.htm'>Olympic National Park</a>",
+        "<a href = 'https://www.nps.gov/hosp/index.htm'>Hot Spring National Park</a>",
+        "<a href = 'https://www.nps.gov/grsm/index.htm'>Greak Smoky National Park</a>",
+        "<a href = 'https://www.nps.gov/yose/index.htm'>Yosemite National Park</a>",
+        "<a href = 'https://www.nps.gov/seki/index.htm'>Sequoia National Park</a>",
+        "<a href = 'https://www.nps.gov/yell/index.htm'>Yellow Stone National Park</a>",
+        "<a href = 'https://www.nps.gov/crla/index.htm'>Crater Lake National Park</a>",
+        "<a href = 'https://www.nps.gov/deva/index.htm'>Death Valley National Park</a>",
+        "<a href = 'https://www.nps.gov/zion/index.htm'>Zion National Park</a>"
+        
+)
+# visited time
+parkLabel <- c("Mar 2011", 
+               "May 2013", 
+               "Jan 2015", 
+               "Mar 2016", 
+               "Dec 2016", 
+               "Dec 2017",
+               "TBD",
+               "TBD",
+               "TBD",
+               "TBD",
+               "TBD")
+# latitude and longitude
+df_park <- data.frame(latitude = c(40.3428, 47.8021, 34.5037, 35.6118, 37.8651, 36.4864, 44.4280, 42.8684,
+                                   36.5323, 37.2982), 
+                          longitude = c(-105.6836, -123.6044, -93.0552, -83.4859, -119.5383, -118.5658, -110.5885, 
+                                        -122.1685, -116.9325, -113.0263),
+                          col = c(rep("green", 6), rep("red", 4)), 
+                      stringsAsFactors = FALSE)
+df_park %>% 
+        leaflet() %>%
+        addTiles() %>%
+        addCircleMarkers(clusterOptions = markerClusterOptions(), 
+                         popup = parkSites, label = parkLabel, 
+                         color = df_park$col) %>%
+        addLegend(labels = c("Visited", "To Be Visited"), col = c("green", "red"))
+```
