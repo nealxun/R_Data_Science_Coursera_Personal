@@ -1,0 +1,116 @@
+---
+title: "Reproducible Research Project1"
+author: "Neal"
+date: "October 28, 2017"
+output: html_document
+---
+
+Personal activity monitoring device data analysis
+
+Prepartion Loading necessary packages
+```{r}
+library(plyr)
+library(dplyr)
+library(lattice)
+```
+
+
+Step 1 Loading and preprocessing the data
+
+```{r}
+df <- read.csv("activity.csv")
+df$date <- as.Date(df$date, format = "%Y-%m-%d")
+```
+
+
+Step 2 What is mean total number of steps per day
+
+```{r}
+# Calculate the total number of steps taken per day
+df_sum_perday <-ddply(df, .(date), summarize, 
+                         sum = sum(steps, na.rm = TRUE))
+hist(df_sum_perday$sum, main = "Total Number of Steps Taken Per Day", 
+     xlab = "Steps")
+# Calculate and report the mean and median of the total number of steps taken per day
+df_mean_perday <- ddply(df, .(date), summarize, 
+                        mean = mean(steps, na.rm = TRUE))
+df_mean_perday
+df_median_perday <-ddply(df, .(date), summarize, 
+                         median = median(steps, na.rm = TRUE))
+df_median_perday
+
+```
+
+Step 3 What is the average daily activity pattern
+
+```{r}
+# Make a time series plot (i.e. type = "l") of the 5-minute interval (x-axis) 
+# and the average number of steps taken, averaged across all days (y-axis)
+df_mean_interval <- ddply(df, .(interval), summarize,
+                          mean = mean(steps, na.rm = TRUE))
+plot(df_mean_interval$interval, df_mean_interval$mean, type = "l", 
+     main = "Average number of steps taken per interval across all days", 
+     xlab = "interval", ylab = "steps")
+# Which 5-minute interval, on average across all the days in the dataset, 
+# contains the maximum number of steps?
+df_mean_interval$interval[which.max(df_mean_interval$mean)]
+```
+
+Step 4 Imputing missing values
+```{r}
+# Calculate and report the total number of missing values in the dataset
+sum(is.na(df$steps))
+# filling all the missing values, use the mean for that 5 minute interval
+df_new <- left_join(df, df_mean_interval, by = c("interval" = "interval"))
+df_new$steps[is.na(df_new$steps)] <- df_new$mean[is.na(df_new$steps)]
+df_new <- select(df_new, steps:interval)
+# Make a histogram of the total number of steps taken each day and Calculate 
+# and report the mean and median total number of steps taken per day
+df_new_sum_perday <-ddply(df_new, .(date), summarize, 
+                         sum = sum(steps, na.rm = TRUE))
+hist(df_new_sum_perday$sum, main = "Total Number of Steps Taken Per Day", 
+     xlab = "Steps")
+df_new_mean_perday <- ddply(df_new, .(date), summarize, 
+                        mean = mean(steps, na.rm = TRUE))
+df_new_mean_perday
+df_new_median_perday <-ddply(df_new, .(date), summarize, 
+                         median = median(steps, na.rm = TRUE))
+df_new_median_perday
+
+```
+
+Step 5 Are there differences in activity patterns between weekdays and weekends?
+```{r}
+# Create a new factor variable in the dataset with two levels - "weekday" and 
+# "weekend" indicating whether a given date is a weekday or weekend day.
+df_new$dayType <- ifelse(weekdays(df_new$date, TRUE) %in% c("Sat", "Sun"), 
+                         "weekend", "weekday")
+df_new$dayType <- as.factor(df_new$dayType)
+```
+
+Make a panel plot containing a time series plot (i.e. type = "l") of the 5-minute 
+interval (x-axis) and the average number of steps taken, averaged across all 
+weekday days or weekend days (y-axis).
+
+```{r}
+df_new_weekend <- ddply(filter(df_new, dayType == "weekend"), .(interval), summarize,
+                          mean = mean(steps, na.rm = TRUE))
+df_new_weekday <- ddply(filter(df_new, dayType == "weekday"), .(interval), summarize,
+                          mean = mean(steps, na.rm = TRUE))
+par(mfrow = c(2, 1))
+plot(df_new_weekend$interval, df_new_weekend$mean, main = "weekend", 
+     xlab = "Interval", ylab = "Number of steps", type = "l")
+plot(df_new_weekday$interval, df_new_weekday$mean, main = "weekday",
+     xlab = "Interval", ylab = "Number of steps", type = "l")
+```
+
+It seems that weekend will produce more steps during the day.
+
+
+
+
+
+
+
+
+
