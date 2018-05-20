@@ -33,6 +33,6 @@ install.packages("shiny")
 install.packages("plotly")
 install.packages("leaflet")
 install.pakcages("reshape")
-
+install.pakcages("swirl")
 
 
