@@ -35,5 +35,6 @@ install.packages("leaflet")
 install.pakcages("reshape")
 install.pakcages("swirl")
 install.packages("stringr")
+install.packages("profvis")
 
 
