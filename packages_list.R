@@ -36,5 +36,6 @@ install.pakcages("reshape")
 install.pakcages("swirl")
 install.packages("stringr")
 install.packages("profvis")
-
+install.pakcages("tidyverse")
+install.packages("taskscheduleR", repos = "http://www.datatailor.be/rcube", type = "source")
 
