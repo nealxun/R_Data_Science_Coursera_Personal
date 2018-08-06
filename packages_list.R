@@ -38,4 +38,8 @@ install.packages("stringr")
 install.packages("profvis")
 install.pakcages("tidyverse")
 install.packages("taskscheduleR", repos = "http://www.datatailor.be/rcube", type = "source")
+install.packages("RODBC")
+install.packages("sqldf")
+install.packages("RODBC")
+install.packages("RMySQL")
 
