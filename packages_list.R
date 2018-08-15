@@ -1,13 +1,17 @@
 # a list of most frequenty used R packages
-# test environment
+# objective, to update R and reinstall all the pakcages
+
+# house keeping procedure
 rm(list = ls())
 wd <- dirname(rstudioapi::getSourceEditorContext()$path)
 setwd(wd)
 
-# update R
-install.packages("installr")
-library(installr)
-updateR()
+# upgrade R
+# installing/loading the package:
+if(!require(installr)) { install.packages("installr"); require(installr)} #load / install+load installr
+updateR(fast = FALSE, browse_news = TRUE, install_R = TRUE, copy_packages = TRUE,
+        copy_Rprofile.site = TRUE, keep_old_packages = TRUE, update_packages = TRUE) # install, move, update.package, quit R.
+
 # check version
 sessionInfo()
 # check r version
@@ -15,31 +19,47 @@ R.Version()
 # check specific package verison
 packageVersion("shiny")
 
-# package list
+## install packages
+# reading data
+install.packages("openxlsx")
+# data manipulation
 install.packages("plyr")
-install.packages("dplyr")
-install.packages("ggplot2")
-install.packages("tidyr")
+install.pakcages("tidyverse")
+install.packages("reshape")
+install.packages("modelr")
+install.packages("stringi")
+# interactive dashboard
+install.packages("shiny")
+install.packages("shinythemes")
+# machine learning
 install.packages("caret")
 install.packages("AppliedPredictiveModeling")
 install.packages("Hmisc")
 install.packages("ElemStatLearn")
 install.packages("gbm")
-install.packages("forecast")
-install.packages("elasticnet")
+# time series forecasting
 install.packages("lubridate")
+install.packages("forecast")
+install.packages("xts")
+install.packages("TTR")
+install.packages("fpp2")
+install.packages("elasticnet")
 install.packages("e1071")
-install.packages("shiny")
+# graphics
 install.packages("plotly")
 install.packages("leaflet")
-install.pakcages("reshape")
+install.packages("hexbin")
 install.pakcages("swirl")
-install.packages("stringr")
+# system and code speed testing
 install.packages("profvis")
-install.pakcages("tidyverse")
-install.packages("taskscheduleR", repos = "http://www.datatailor.be/rcube", type = "source")
+# database related package
 install.packages("RODBC")
 install.packages("sqldf")
 install.packages("RODBC")
 install.packages("RMySQL")
-
+# open data source
+install.packages("nycflights13")
+install.packages("gapminder")
+install.packages("Lahman")
+# other
+install.packages("yaml")
