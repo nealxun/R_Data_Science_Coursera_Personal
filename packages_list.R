@@ -37,6 +37,7 @@ install.packages("AppliedPredictiveModeling")
 install.packages("Hmisc")
 install.packages("ElemStatLearn")
 install.packages("gbm")
+install.packages("faraway")
 # time series forecasting
 install.packages("lubridate")
 install.packages("forecast")
@@ -49,7 +50,8 @@ install.packages("e1071")
 install.packages("plotly")
 install.packages("leaflet")
 install.packages("hexbin")
-install.pakcages("swirl")
+# interactive learning
+install.packages("swirl")
 # system and code speed testing
 install.packages("profvis")
 # database related package
