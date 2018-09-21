@@ -24,7 +24,7 @@ packageVersion("shiny")
 install.packages("openxlsx")
 # data manipulation
 install.packages("plyr")
-install.pakcages("tidyverse")
+install.packages("tidyverse")
 install.packages("reshape")
 install.packages("modelr")
 install.packages("stringi")
