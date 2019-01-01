@@ -6,5 +6,5 @@ Links to the html file (hosted by github)
 Version 1:
 https://nealxun.github.io/RDataScienceCoursera_Personal/9_DataProduct/Leaflet/project1_v1.html
 
-Travel Places:
+Version 2:
 https://nealxun.github.io/RDataScienceCoursera_Personal/9_DataProduct/Leaflet/travel_places_v2.html
