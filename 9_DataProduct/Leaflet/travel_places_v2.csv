@@ -11,3 +11,6 @@ num,date,place,state,country,latitude,longtitude,pic,color,note
 10,10/6/2018,UC Berkley,California,United States,37.87237,-122.25928,https://nealxun.github.io/RDataScienceCoursera_Personal/9_DataProduct/Leaflet/Pics/UCBerkley.jpg,springgreen,Visited
 11,10/13/2018,Los Angeles,California,United States,34.05910,-118.21636,https://nealxun.github.io/RDataScienceCoursera_Personal/9_DataProduct/Leaflet/Pics/LosAngeles.jpg,springgreen,Visited
 12,11/10/2018,Monterey,California,United States,36.60084,-121.89600,https://nealxun.github.io/RDataScienceCoursera_Personal/9_DataProduct/Leaflet/Pics/Monterey.jpg,springgreen,Visited
+13,12/22/2018,Las Vegas,Nevada,United States,36.169724,-115.159113,https://nealxun.github.io/RDataScienceCoursera_Personal/9_DataProduct/Leaflet/Pics/LasVegas.jpg,springgreen,Visited
+14,12/30/2018,Sunol Regional Wilderness,California,United States,37.514682,-121.831273,https://nealxun.github.io/RDataScienceCoursera_Personal/9_DataProduct/Leaflet/Pics/SunolRegionalWilderness.jpg,springgreen,Visited
+15,12/31/2018,Milpitas,California,United States,37.418915,-121.925867,https://nealxun.github.io/RDataScienceCoursera_Personal/9_DataProduct/Leaflet/Pics/HomeFood.jpg,springgreen,Visited
