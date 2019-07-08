@@ -1,7 +1,7 @@
 num,date,place,state,country,latitude,longtitude,pic,color,note
 1,6/2/2018,Mystery Spot,California,United States,37.0176,-122.00263,https://nealxun.github.io/RDataScienceCoursera_Personal/9_DataProduct/Leaflet/Pics/MysterySpot2.jpg,springgreen,Visited
 2,6/13/2018,Central Park Duck Bay,California,United States,37.54815,-121.96534,https://nealxun.github.io/RDataScienceCoursera_Personal/9_DataProduct/Leaflet/Pics/CentralPark.jpg,springgreen,Visited
-3,6/23/2018,Hakone Gardens,California,United States,37.25229,-122.04159,https://nealxun.github.io/RDataScienceCoursera_Personal/9_DataProduct/Leaflet/Pics/HakoneGarden3.jpg,springgreen,Visited
+3,6/23/2018,Hakone Gardens,California,United States,37.25229,-122.04159,https://nealxun.github.io/RDataScienceCoursera_Personal/9_DataProduct/Leaflet/Pics/HakoneGarden.jpg,springgreen,Visited
 4,7/14/2018,San Francisco,California,United States,37.80798,-122.41778,https://nealxun.github.io/RDataScienceCoursera_Personal/9_DataProduct/Leaflet/Pics/SanFrancisco2.jpg,springgreen,Visited
 5,8/4/2018,South Lake Tahoe,California,United States,38.94155,-119.97541,https://nealxun.github.io/RDataScienceCoursera_Personal/9_DataProduct/Leaflet/Pics/SouthLakeTahoe.jpg,springgreen,Visited
 6,8/19/2018,Big Basin Redwood State Park,California,United States,37.17284,-122.22142,https://nealxun.github.io/RDataScienceCoursera_Personal/9_DataProduct/Leaflet/Pics/BigBasinRedwoodStatePark.jpg,springgreen,Visited
