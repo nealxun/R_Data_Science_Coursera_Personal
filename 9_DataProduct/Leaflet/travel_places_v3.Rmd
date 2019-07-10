@@ -39,7 +39,7 @@ placesPics <- df_raw$pic
 
 # customized icons
 icon_list <- iconList(
-        natural = makeIcon("https://raw.githubusercontent.com/nealxun/RDataScienceCoursera_Personal/gh-pages/9_DataProduct/Leaflet/national-park-map-icons.png", iconWidth = 24, iconHeight = 30),
+        nature = makeIcon("https://raw.githubusercontent.com/nealxun/RDataScienceCoursera_Personal/gh-pages/9_DataProduct/Leaflet/national-park-map-icons.png", iconWidth = 24, iconHeight = 30),
         city = makeIcon("https://raw.githubusercontent.com/nealxun/RDataScienceCoursera_Personal/gh-pages/9_DataProduct/Leaflet/city_icon.png", iconWidth = 24, iconHeight = 30))
 
 # draw the map
@@ -55,8 +55,8 @@ df_places %>%
         # add numbers
         addLabelOnlyMarkers(lat = ~latitude, lng = ~longtitude, label = ~as.character(num),
                             labelOptions = labelOptions(noHide = TRUE, textOnly = FALSE, 
-                                                        textsize = "10px", opacity = 0.8))
-        #addLegend(labels = unique(df_places$note), col = unique(df_places$color))
+                                                        textsize = "10px", opacity = 0.8)) %>%
+        addLegend(labels = unique(df_places$icon), col = unique(df_places$color))
 ```
 
 
