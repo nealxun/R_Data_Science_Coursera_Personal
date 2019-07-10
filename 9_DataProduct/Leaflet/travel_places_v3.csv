@@ -1,0 +1,23 @@
+num,date,place,state,country,latitude,longtitude,pic,color,note
+1,6/2/2018,Mystery Spot,California,United States,37.0176,-122.00263,https://nealxun.github.io/RDataScienceCoursera_Personal/9_DataProduct/Leaflet/Pics/MysterySpot2.jpg,springgreen,Visited
+2,6/13/2018,Central Park Duck Bay,California,United States,37.54815,-121.96534,https://nealxun.github.io/RDataScienceCoursera_Personal/9_DataProduct/Leaflet/Pics/CentralPark.jpg,springgreen,Visited
+3,6/23/2018,Hakone Gardens,California,United States,37.25229,-122.04159,https://nealxun.github.io/RDataScienceCoursera_Personal/9_DataProduct/Leaflet/Pics/HakoneGarden3.jpg,springgreen,Visited
+4,7/14/2018,San Francisco,California,United States,37.80798,-122.41778,https://nealxun.github.io/RDataScienceCoursera_Personal/9_DataProduct/Leaflet/Pics/SanFrancisco2.jpg,springgreen,Visited
+5,8/4/2018,South Lake Tahoe,California,United States,38.94155,-119.97541,https://nealxun.github.io/RDataScienceCoursera_Personal/9_DataProduct/Leaflet/Pics/SouthLakeTahoe.jpg,springgreen,Visited
+6,8/19/2018,Big Basin Redwood State Park,California,United States,37.17284,-122.22142,https://nealxun.github.io/RDataScienceCoursera_Personal/9_DataProduct/Leaflet/Pics/BigBasinRedwoodStatePark.jpg,springgreen,Visited
+7,9/2/2018,Yellowstone National Park,Wyoming,United States,44.44827,-110.70969,https://nealxun.github.io/RDataScienceCoursera_Personal/9_DataProduct/Leaflet/Pics/YellowStoneNationalPark.jpg,springgreen,Visited
+8,9/3/2018,Grand Teton National Park,Wyoming,United States,43.79075,-110.71346,https://nealxun.github.io/RDataScienceCoursera_Personal/9_DataProduct/Leaflet/Pics/GrandTetonNationalPark.jpg,springgreen,Visited
+9,9/23/2018,Muri Woods State Park,California,United States,37.89701,-122.58105,https://nealxun.github.io/RDataScienceCoursera_Personal/9_DataProduct/Leaflet/Pics/MuriWoodStatePark.jpg,springgreen,Visited
+10,10/6/2018,UC Berkley,California,United States,37.87237,-122.25928,https://nealxun.github.io/RDataScienceCoursera_Personal/9_DataProduct/Leaflet/Pics/UCBerkley2.jpg,springgreen,Visited
+11,10/13/2018,Los Angeles,California,United States,34.0591,-118.21636,https://nealxun.github.io/RDataScienceCoursera_Personal/9_DataProduct/Leaflet/Pics/LosAngeles2.jpg,springgreen,Visited
+12,11/10/2018,Monterey,California,United States,36.60084,-121.896,https://nealxun.github.io/RDataScienceCoursera_Personal/9_DataProduct/Leaflet/Pics/Monterey.jpg,springgreen,Visited
+13,12/22/2018,Las Vegas,Nevada,United States,36.169724,-115.159113,https://nealxun.github.io/RDataScienceCoursera_Personal/9_DataProduct/Leaflet/Pics/LasVegas.jpg,springgreen,Visited
+14,12/30/2018,Sunol Regional Wilderness,California,United States,37.514682,-121.831273,https://nealxun.github.io/RDataScienceCoursera_Personal/9_DataProduct/Leaflet/Pics/SunolRegionalWilderness2.jpg,springgreen,Visited
+15,12/31/2018,Milpitas,California,United States,37.418915,-121.925867,https://nealxun.github.io/RDataScienceCoursera_Personal/9_DataProduct/Leaflet/Pics/HomeFood.jpg,springgreen,Visited
+16,2/10/2019,Oakland,California,United States,37.750743,-122.203046,https://nealxun.github.io/RDataScienceCoursera_Personal/9_DataProduct/Leaflet/Pics/OracleArena.jpg,springgreen,Visited
+17,2/18/2019,Pinnacles National Park,California,United States,36.492061,-121.180559,https://nealxun.github.io/RDataScienceCoursera_Personal/9_DataProduct/Leaflet/Pics/PinnaclesNationalPark.jpg,springgreen,Visited
+18,3/30/2019,Carmel,California,United States,36.555262,-121.922981,https://nealxun.github.io/RDataScienceCoursera_Personal/9_DataProduct/Leaflet/Pics/Carmel.jpg,springgreen,Visited
+19,4/27/2019,Yosemite National Park,California,United States,37.864509,-119.524965,https://nealxun.github.io/RDataScienceCoursera_Personal/9_DataProduct/Leaflet/Pics/YosemiteNationalPark.jpg,springgreen,Visited
+20,5/26/2019,San Diego,California,United States,32.716698,-117.160079,https://nealxun.github.io/RDataScienceCoursera_Personal/9_DataProduct/Leaflet/Pics/SanDiego.jpg,springgreen,Visited
+21,7/5/2019,Crater Lake National Park,Oregon,United States,42.868964,-122.183115,https://nealxun.github.io/RDataScienceCoursera_Personal/9_DataProduct/Leaflet/Pics/CraterLakeNationalPark.jpg,springgreen,Visited
+22,7/6/2019,Lassen Volcanic National Park,California,United States,40.497894,-121.419355,https://nealxun.github.io/RDataScienceCoursera_Personal/9_DataProduct/Leaflet/Pics/LassenVolcanicNationalPark.jpg,springgreen,Visited
