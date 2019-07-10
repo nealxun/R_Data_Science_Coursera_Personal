@@ -17,7 +17,7 @@ library(mapview)
 ## National Parks
 
 ```{r read and process data, include=FALSE}
-df_raw <- read.csv(file = "https://raw.githubusercontent.com/nealxun/RDataScienceCoursera_Personal/gh-pages/9_DataProduct/Leaflet/travel_places_v2.csv", 
+df_raw <- read.csv(file = "https://raw.githubusercontent.com/nealxun/RDataScienceCoursera_Personal/gh-pages/9_DataProduct/Leaflet/travel_places_v3.csv", 
                    header = TRUE, stringsAsFactors = FALSE)
 #df_raw <- read_csv("travel_places_test.csv")
 df_raw$date <- as.Date(df_raw$date, format = "%m/%d/%Y")
