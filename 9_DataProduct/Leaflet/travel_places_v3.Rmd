@@ -1,0 +1,62 @@
+---
+title: "Travel Places"
+author: "Small Ni and Big Fu"
+date: "July, 2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(leaflet)
+library(tidyverse)
+library(RCurl)
+library(htmltools)
+library(mapview)
+```
+
+## National Parks
+
+```{r read and process data, include=FALSE}
+df_raw <- read.csv(file = "https://raw.githubusercontent.com/nealxun/RDataScienceCoursera_Personal/gh-pages/9_DataProduct/Leaflet/travel_places_v3.csv", 
+                   header = TRUE, stringsAsFactors = FALSE)
+
+#df_raw <- read_csv("travel_places_v3.csv")
+
+df_raw$date <- as.Date(df_raw$date, format = "%m/%d/%Y")
+
+df_places <- df_raw %>%
+        mutate(info = paste(sep = "<br/>", num, date, place))
+
+```
+
+```{r maps, echo = FALSE, warning=FALSE, message=FALSE}
+# places information (sequence, date, place name), show when hover the mice
+nums <- paste0("<b>", df_places$num, "</b>")
+placesInfo <- paste(sep = "<br/>", nums, df_places$date, df_places$place)
+
+# pictures link, clice the marker
+placesPics <- df_raw$pic
+
+# customized icons
+icon_list <- iconList(
+        natural = makeIcon("https://raw.githubusercontent.com/nealxun/RDataScienceCoursera_Personal/gh-pages/9_DataProduct/Leaflet/national-park-map-icons.png", iconWidth = 24, iconHeight = 30),
+        city = makeIcon("https://raw.githubusercontent.com/nealxun/RDataScienceCoursera_Personal/gh-pages/9_DataProduct/Leaflet/city_icon.png", iconWidth = 24, iconHeight = 30))
+
+# draw the map
+df_places %>% 
+        leaflet() %>%
+        addTiles() %>%
+        addMarkers(clusterOptions = markerClusterOptions(),
+                 lat = ~latitude, lng = ~longtitude,
+                 label = lapply(placesInfo, HTML), # multiple lines
+                 popup = popupImage(placesPics),
+                 #color = ~color,
+                 icon = ~icon_list[df_places$icon]) %>%
+        # add numbers
+        addLabelOnlyMarkers(lat = ~latitude, lng = ~longtitude, label = ~as.character(num),
+                            labelOptions = labelOptions(noHide = TRUE, textOnly = FALSE, 
+                                                        textsize = "10px", opacity = 0.8))
+        #addLegend(labels = unique(df_places$note), col = unique(df_places$color))
+```
+
+
