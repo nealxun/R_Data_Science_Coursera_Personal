@@ -1,5 +1,5 @@
 # Data Prodcut Project
-Create a Leaflet Map to show the national parks has been visited
+Create a Leaflet Map to show the places have been visited
 
 Links to the html file (hosted by github)
 
